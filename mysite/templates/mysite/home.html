@@ -1,0 +1,243 @@
+
+{% extends 'mysite/base.html' %}
+{% load static %}
+{% block content %}
+
+<nav class="navbar navbar-expand-lg navbar-white bg-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="{% url 'home' %}" style="color: azure;">CrimesIndia</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto mb-2 mb-lg-0">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        CrimeCategory
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="{% url 'auto-theft'%}" target="_blank">AutoTheft
+                                Cases</a></li>
+                        <li><a class="dropdown-item" href="{% url 'property-stolen'%}" target="_blank">PropertyTheft
+                                Cases</a></li>
+                        <li><a class="dropdown-item" href="{% url 'total-kidnapp'%}" target="_blank">Kidnapping Cases</a>
+                        </li>
+                        <li><a class="dropdown-item" href="{% url 'total-murder'%}" target="_blank">Murder Cases</a></li>
+                        <li><a class="dropdown-item" href="{% url 'total-rape'%}" target="_blank">Rape
+                                Cases</a></li>
+                    </ul>
+                </li>
+
+                <li class="nav-item">
+                    <div class="hover_img">
+                        <a class="nav-link" href="{% url 'total-cluster'%}" target="blank"
+                            style=" text-decoration: none;">
+                            <span><img src="{%static 'images/ClusteredMap.png'%}" alt="image" height="100" /></span>ClusteredMap</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="container-fluid banner">
+    <img src="{%static 'images/crime.jpg'%}" class="img-fluid" alt="Responsive image">
+    <div class="text-over-img"><h1>CRIMES IN INDIA</h1></div>
+</div>
+
+<section class="main_heading my-3 main-content">
+    <div class="text-center">
+        <h1 class="display-6">Categories</h1>
+        <hr class="w-25 mx-auto" />
+    </div>
+    <div class="container">
+        <div class="row my-5">
+            <div class="col-lg-6 col-md-6 col-12 col-xxl-6">
+                <figure>
+                    <img src="{%static 'images/autoTheft.jpg'%}" style="border-radius:7px;" class="img-fluid abt-img"
+                        alt="Auto Theft image">
+                </figure>
+            </div>
+            <div class="col-lg-6 col-md-6 col-12 col-xxl-6">
+                <h1>Auto Theft</h1>
+                <p>Automobile theft is a major contributor to the ever-increasing crime rate in India. 
+                    Metro cities take the majority of the brunt when it comes to vehicle theft but it is prevalent in most 
+                    parts of the country. According to government data, in 2016, there were more than 2 lakh cases registered 
+                    for vehicle theft across the country. You will be surprised to know that the price of GPS tracker for vehicle 
+                    is very mere in comparison to bringing a new car after theft.</p>
+                <div class="hover_img">
+                    <a class="btn btn-dark" href="{% url 'auto-theft'%}" target="blank" role="button">
+                        <span><img src="{%static 'images/mapAutoTheft.png'%}" alt="image" height="125" /></span> Check state-wise</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="row my-5">
+            <div class="col-lg-6 col-md-6 col-12 col-xxl-6">
+                <figure>
+                    <img src="{%static 'images/propertyTheft.png'%}" style="border-radius:7px; " class="img-fluid abt-img"
+                        alt="Property Theft image">
+                </figure>
+            </div>
+            <div class="col-lg-6 col-md-6 col-12 col-xxl-6">
+                <h1>Property Theft</h1>
+                <p>home safety is a serious concern for the residents as well as the police and the authorities. 
+                    Hence, in order to encourage people to protect their homes against threats like robberies, burglaries, and thefts, 
+                    November 15 was earmarked as the Home Safety Day in 2017.</p>
+                <div class="hover_img">
+                    <a class="btn btn-dark" href="{% url 'property-stolen'%}" target="blank" role="button">
+                        <span><img src="{%static 'images/mapProperrtyTheft.png'%}" alt="image" height="125" /></span> Check
+                        state-wise</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="row my-5">
+            <div class="col-lg-6 col-md-6 col-12 col-xxl-6">
+                <figure>
+                    <img src="{%static 'images/kidnapping.jpg'%}" style="border-radius:7px;" class="img-fluid abt-img"
+                        alt="Kidnapping image">
+                </figure>
+            </div>
+            <div class="col-lg-6 col-md-6 col-12 col-xxl-6">
+                <h1>Kidnapping</h1>
+                <p>Number of reported abduction and kidnapping cases in India 2005-2019. In 2019, 
+                    the reported kidnapping and abduction cases amounted to just over 105 thousand cases across India. 
+                    Kidnapping and abduction accounted to over three percent of the crimes reported under the Indian Penal Code.</p>
+                <div class="hover_img">
+                    <a class="btn btn-dark" href="{% url 'total-kidnapp'%}" target="blank" role="button">
+                        <span><img src="{%static 'images/mapKidnapping.png'%}" alt="image" height="125" /></span> Check state-wise</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="row my-5">
+            <div class="col-lg-6 col-md-6 col-12 col-xxl-6">
+                <figure>
+                    <img src="{%static 'images/murder.jpg'%}" style="border-radius:7px; " class="img-fluid abt-img"
+                        alt="Murder theme image">
+                </figure>
+            </div>
+            <div class="col-lg-6 col-md-6 col-12 col-xxl-6">
+                <h1>Murder</h1>
+                <p>India recorded an average of 79 murder cases daily in 2019, according to a latest government data. 
+                    A total of 28,918 cases of murder were registered in 2019, showing a marginal decline of 0.3 per cent 
+                    over 2018 (29,017 cases), the data compiled by the National Crime Records Bureau (NCRB) showed.</p>
+                <div class="hover_img">
+                    <a class="btn btn-dark" href="{% url 'total-murder'%}" target="blank" role="button">
+                        <span><img src="{%static 'images/mapMurder.png'%}" alt="image" height="125" /></span> Check state-wise</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="row my-5">
+            <div class="col-lg-6 col-md-6 col-12 col-xxl-6">
+                <figure>
+                    <img src="{%static 'images/sexAssault.jpg'%}" style="border-radius:7px; " class="img-fluid abt-img"
+                        alt="sexAssault theme image">
+                </figure>
+            </div>
+            <div class="col-lg-6 col-md-6 col-12 col-xxl-6">
+                <h1>Sexual Assault</h1>
+                <p>Rape is the fourth most common crime against women in India. According to the 2019 annual report of the 
+                    National Crime Records Bureau (NCRB), 32033 rape cases were registered across the country, or an average of 
+                    88 cases daily,slightly lower than 2018 when 91 cases were registered daily.</p>
+                <div class="hover_img">
+                    <a class="btn btn-dark" href="{% url 'total-rape'%}" target="blank" role="button">
+                        <span><img src="{%static 'images/rapeAssault.png'%}" alt="image" height="125" /></span> Check state-wise</a>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+</section>
+
+<div class="container my-5">
+    <div class="table_responsive">
+        <div align="center">
+            <button type="button" name="load_data" id="load_data" class="btn btn-dark">
+                Check state data
+            </button>
+        </div>
+        <br>
+        <div class="table-responsive">
+            {% include 'mysite/table.html' %}
+        </div>
+        
+    </div>
+</div>
+
+<div class="container my-5">
+    <div class="table_responsive">
+        <div align="center">
+            <button type="button" name="load_data1" id="load_data1" class="btn btn-dark">
+                Clustered Map
+            </button>
+        </div>
+        <br>
+        <div class="table-responsive">
+            {% include 'mysite/final_cluster_table.html' %}
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"
+    integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js"
+    integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc"
+    crossorigin="anonymous"></script>
+
+<div class="container-fluid mt-5">
+    <div class="card mx-5">
+        <div class="row mb-4 ">
+            <div class="col-md-4 col-sm-11 col-xs-11">
+                <div class="footer-text pull-left">
+                    <div class="d-flex">
+
+                        <h1 style="color: #957bda">CrimesIndia</h1>
+                    </div>
+
+                    <div class="social mt-2 mb-3"> <i class="fa fa-facebook-official fa-lg"></i> <i
+                            class="fa fa-instagram fa-lg"></i> <i class="fa fa-twitter fa-lg"></i> <i
+                            class="fa fa-linkedin-square fa-lg"></i> <i class="fa fa-facebook"></i> </div>
+                </div>
+            </div>
+            <div class="col-md-2 col-sm-1 col-xs-1 mb-2"></div>
+            <div class="col-md-2 col-sm-4 col-xs-4">
+                <h5 class="heading">Team Members</h5>
+                <ul>
+                    <li>Sagar Singh (17BCE10122)</li>
+                    <li>Swastik Srivastava (17BCE10006)</li>
+                    <li>Rohit Kumar Ranjan (17BCE10067)</li>
+                </ul>
+            </div>
+        </div>
+        <div class="divider mb-4"> </div>
+        <div class="row" style="font-size:10px;">
+            <div class="col-md-6 col-sm-6 col-xs-6">
+                <div class="pull-left">
+                    <p><i class="fa fa-copyright"></i>&copy;CrimesIndia | All Rights Reserved</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-sm-6 col-xs-6">
+                <div class="pull-right mr-4 d-flex policy">
+                    <div>Terms of Use</div>
+                    <div>Privacy Policy</div>
+                    <div>Cookie Policy</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- table-show-js -->
+
+<script src="{% static 'js/app.js'%}"></script>
+
+
+{% endblock %}
