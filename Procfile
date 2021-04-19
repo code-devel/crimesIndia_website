@@ -1,0 +1,1 @@
+web: gunicorn crimesinindia.wsgi --log-file -
